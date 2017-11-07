@@ -1,4 +1,5 @@
 # exampletest
 test
 
-git test
+Student mgr
+using map
