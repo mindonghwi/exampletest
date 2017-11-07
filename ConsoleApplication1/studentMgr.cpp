@@ -41,7 +41,6 @@ void C_STUDENTMGR::deleteStudent(const char * pName)
 		= m_mapStudentData.find(pName);
 
 	delete iter->second;
-	iter->second = nullptr;
 	m_mapStudentData.erase(iter);
 }
 
@@ -52,10 +51,7 @@ void C_STUDENTMGR::release()
 	while (iter != m_mapStudentData.end())
 	{
 		delete iter->second;
-		iter->second = nullptr;
-		iter = m_mapStudentData.erase(iter);
-
 	}
 
-
+	m_mapStudentData.clear();
 }
